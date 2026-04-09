@@ -24,6 +24,7 @@ type FilterType = "전체" | "완료" | "미완료";
 const Index = () => {
   const [items, setItems] = useState<CheckItem[]>(initialItems);
   const [filter, setFilter] = useState<FilterType>("전체");
+  const { theme, toggleTheme } = useTheme();
 
   const completedCount = items.filter((i) => i.checked).length;
   const totalCount = items.length;
