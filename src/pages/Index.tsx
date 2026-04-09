@@ -56,7 +56,7 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-10 border-b border-border bg-card/80 backdrop-blur-md">
         <div className="container max-w-2xl mx-auto px-4 py-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mb-4">
               <ClipboardCheck className="h-7 w-7 text-primary" />
               <h1 className="text-xl font-bold text-foreground tracking-tight flex-1">
                 OK금융 업무 점검
