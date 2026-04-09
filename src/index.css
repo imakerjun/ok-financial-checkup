@@ -35,7 +35,7 @@
     --sidebar-border: 220 13% 88%;
     --sidebar-ring: 199 89% 48%;
     --progress-bg: 220 14% 90%;
-    --progress-fill: 199 89% 48%;
+    --progress-fill: 0 84% 55%;
     --check-complete: 160 84% 39%;
   }
 
@@ -68,7 +68,7 @@
     --sidebar-border: 220 13% 22%;
     --sidebar-ring: 199 89% 48%;
     --progress-bg: 220 14% 18%;
-    --progress-fill: 199 89% 48%;
+    --progress-fill: 0 84% 55%;
     --check-complete: 160 84% 39%;
   }
 }

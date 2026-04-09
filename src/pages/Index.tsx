@@ -97,7 +97,7 @@ const Index = () => {
                 onClick={() => setFilter(f)}
                 className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                   filter === f
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-red-500 text-white"
                     : "bg-secondary text-secondary-foreground hover:bg-muted"
                 }`}
               >
