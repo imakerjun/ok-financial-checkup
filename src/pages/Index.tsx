@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { CheckCircle2, Circle, ClipboardCheck, Filter } from "lucide-react";
+import { CheckCircle2, Circle, ClipboardCheck, Filter, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/hooks/use-theme";
 
 interface CheckItem {
   id: string;
