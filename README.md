@@ -1,3 +1,1 @@
-# Welcome to your Lovable project
-
-TODO: Document your project here
+# OK 금융 그룹 샘플 프로젝트
