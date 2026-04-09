@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { CheckCircle2, Circle, ClipboardCheck, Filter } from "lucide-react";
+import { CheckCircle2, Circle, ClipboardCheck, Filter, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/hooks/use-theme";
 
 interface CheckItem {
   id: string;
@@ -23,6 +24,7 @@ type FilterType = "전체" | "완료" | "미완료";
 const Index = () => {
   const [items, setItems] = useState<CheckItem[]>(initialItems);
   const [filter, setFilter] = useState<FilterType>("전체");
+  const { theme, toggleTheme } = useTheme();
 
   const completedCount = items.filter((i) => i.checked).length;
   const totalCount = items.length;
@@ -54,12 +56,19 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-10 border-b border-border bg-card/80 backdrop-blur-md">
         <div className="container max-w-2xl mx-auto px-4 py-4">
-          <div className="flex items-center gap-3 mb-4">
-            <ClipboardCheck className="h-7 w-7 text-primary" />
-            <h1 className="text-xl font-bold text-foreground tracking-tight">
-              OK금융 업무 점검
-            </h1>
-          </div>
+            <div className="flex items-center gap-3 mb-4">
+              <ClipboardCheck className="h-7 w-7 text-primary" />
+              <h1 className="text-xl font-bold text-foreground tracking-tight flex-1">
+                OK금융 업무 점검
+              </h1>
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-md bg-secondary text-secondary-foreground hover:bg-muted transition-colors"
+                aria-label="테마 전환"
+              >
+                {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              </button>
+            </div>
 
           {/* Progress */}
           <div className="mb-3">
